@@ -35,9 +35,9 @@ namespace Sueldos_3formularios_
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblTotalF = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblDescuentoF = new System.Windows.Forms.Label();
+            this.lblDescuento = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblSalario = new System.Windows.Forms.Label();
             this.lblPremio = new System.Windows.Forms.Label();
@@ -63,78 +63,80 @@ namespace Sueldos_3formularios_
             this.btnVolver.TabIndex = 21;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(96, 143);
+            this.label4.Location = new System.Drawing.Point(87, 136);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 15);
+            this.label4.Size = new System.Drawing.Size(52, 15);
             this.label4.TabIndex = 18;
-            this.label4.Text = "Sueldo";
+            this.label4.Text = "Sueldo $";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(93, 186);
+            this.label3.Location = new System.Drawing.Point(84, 179);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 15);
+            this.label3.Size = new System.Drawing.Size(54, 15);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Premio";
+            this.label3.Text = "Premio $";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 228);
+            this.label2.Location = new System.Drawing.Point(43, 221);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 15);
+            this.label2.Size = new System.Drawing.Size(96, 15);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Salario Familiar";
+            this.label2.Text = "Salario Familiar $";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 102);
+            this.label1.Location = new System.Drawing.Point(32, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 15);
             this.label1.TabIndex = 12;
             this.label1.Text = "Nombre y Apellido";
             // 
-            // lblTotalF
+            // lblTotal
             // 
-            this.lblTotalF.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.lblTotalF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTotalF.Location = new System.Drawing.Point(153, 310);
-            this.lblTotalF.Name = "lblTotalF";
-            this.lblTotalF.Size = new System.Drawing.Size(144, 23);
-            this.lblTotalF.TabIndex = 27;
+            this.lblTotal.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTotal.Location = new System.Drawing.Point(153, 310);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(144, 23);
+            this.lblTotal.TabIndex = 27;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(56, 318);
+            this.label6.Location = new System.Drawing.Point(47, 311);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 15);
+            this.label6.Size = new System.Drawing.Size(92, 15);
             this.label6.TabIndex = 26;
-            this.label6.Text = " Total a Cobrar";
+            this.label6.Text = " Total a Cobrar $";
             // 
-            // lblDescuentoF
+            // lblDescuento
             // 
-            this.lblDescuentoF.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.lblDescuentoF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDescuentoF.Location = new System.Drawing.Point(153, 267);
-            this.lblDescuentoF.Name = "lblDescuentoF";
-            this.lblDescuentoF.Size = new System.Drawing.Size(144, 21);
-            this.lblDescuentoF.TabIndex = 25;
+            this.lblDescuento.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.lblDescuento.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDescuento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblDescuento.Location = new System.Drawing.Point(153, 267);
+            this.lblDescuento.Name = "lblDescuento";
+            this.lblDescuento.Size = new System.Drawing.Size(144, 21);
+            this.lblDescuento.TabIndex = 25;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 273);
+            this.label7.Location = new System.Drawing.Point(17, 268);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 15);
+            this.label7.Size = new System.Drawing.Size(122, 15);
             this.label7.TabIndex = 24;
-            this.label7.Text = "Descuento Aplicado";
+            this.label7.Text = "Descuento Aplicado $";
             // 
             // lblSalario
             // 
@@ -181,9 +183,9 @@ namespace Sueldos_3formularios_
             this.Controls.Add(this.lblSueldo);
             this.Controls.Add(this.lblPremio);
             this.Controls.Add(this.lblSalario);
-            this.Controls.Add(this.lblTotalF);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.lblDescuentoF);
+            this.Controls.Add(this.lblDescuento);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnVolver);
@@ -206,9 +208,9 @@ namespace Sueldos_3formularios_
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblTotalF;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblDescuentoF;
+        private System.Windows.Forms.Label lblDescuento;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblSalario;
         private System.Windows.Forms.Label lblPremio;

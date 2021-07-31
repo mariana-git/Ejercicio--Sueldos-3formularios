@@ -92,6 +92,7 @@ namespace Sueldos_3formularios_
             this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSiguiente3
             // 
@@ -101,12 +102,13 @@ namespace Sueldos_3formularios_
             this.btnSiguiente3.TabIndex = 11;
             this.btnSiguiente3.Text = "Siguiente";
             this.btnSiguiente3.UseVisualStyleBackColor = true;
+            this.btnSiguiente3.Click += new System.EventHandler(this.btnSiguiente3_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 284);
+            this.ClientSize = new System.Drawing.Size(312, 279);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSiguiente3);
             this.Controls.Add(this.lblTotal);

@@ -33,7 +33,6 @@ namespace Sueldos_3formularios_
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtSalario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtPremio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSueldo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,12 +40,13 @@ namespace Sueldos_3formularios_
             this.btnSiguiente2 = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtPremio = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 93);
+            this.label1.Location = new System.Drawing.Point(21, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 15);
             this.label1.TabIndex = 0;
@@ -58,13 +58,15 @@ namespace Sueldos_3formularios_
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(149, 23);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtSalario
             // 
             this.txtSalario.Location = new System.Drawing.Point(134, 227);
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(149, 23);
-            this.txtSalario.TabIndex = 3;
+            this.txtSalario.TabIndex = 4;
+            this.txtSalario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalario_KeyPress);
             // 
             // label2
             // 
@@ -75,33 +77,27 @@ namespace Sueldos_3formularios_
             this.label2.TabIndex = 2;
             this.label2.Text = "Salario Familiar";
             // 
-            // txtPremio
-            // 
-            this.txtPremio.Location = new System.Drawing.Point(134, 182);
-            this.txtPremio.Name = "txtPremio";
-            this.txtPremio.Size = new System.Drawing.Size(149, 23);
-            this.txtPremio.TabIndex = 5;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 182);
+            this.label3.Location = new System.Drawing.Point(62, 185);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 15);
+            this.label3.Size = new System.Drawing.Size(66, 15);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Premio";
+            this.label3.Text = "Premio (%)";
             // 
             // txtSueldo
             // 
             this.txtSueldo.Location = new System.Drawing.Point(134, 134);
             this.txtSueldo.Name = "txtSueldo";
             this.txtSueldo.Size = new System.Drawing.Size(149, 23);
-            this.txtSueldo.TabIndex = 7;
+            this.txtSueldo.TabIndex = 2;
+            this.txtSueldo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldo_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(65, 134);
+            this.label4.Location = new System.Drawing.Point(85, 137);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 15);
             this.label4.TabIndex = 6;
@@ -109,30 +105,33 @@ namespace Sueldos_3formularios_
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(14, 282);
+            this.btnSalir.Location = new System.Drawing.Point(23, 282);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 8;
+            this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnSiguiente2
             // 
-            this.btnSiguiente2.Location = new System.Drawing.Point(208, 282);
+            this.btnSiguiente2.Location = new System.Drawing.Point(237, 282);
             this.btnSiguiente2.Name = "btnSiguiente2";
             this.btnSiguiente2.Size = new System.Drawing.Size(75, 23);
-            this.btnSiguiente2.TabIndex = 9;
+            this.btnSiguiente2.TabIndex = 7;
             this.btnSiguiente2.Text = "Siguiente";
             this.btnSiguiente2.UseVisualStyleBackColor = true;
+            this.btnSiguiente2.Click += new System.EventHandler(this.btnSiguiente2_Click);
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(111, 282);
+            this.btnLimpiar.Location = new System.Drawing.Point(124, 282);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpiar.TabIndex = 10;
+            this.btnLimpiar.Size = new System.Drawing.Size(85, 23);
+            this.btnLimpiar.TabIndex = 6;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // label5
             // 
@@ -144,11 +143,19 @@ namespace Sueldos_3formularios_
             this.label5.TabIndex = 11;
             this.label5.Text = "Cálculo de Sueldo";
             // 
+            // txtPremio
+            // 
+            this.txtPremio.Location = new System.Drawing.Point(134, 182);
+            this.txtPremio.Name = "txtPremio";
+            this.txtPremio.Size = new System.Drawing.Size(149, 23);
+            this.txtPremio.TabIndex = 3;
+            this.txtPremio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPremio_KeyPress);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 368);
+            this.ClientSize = new System.Drawing.Size(359, 367);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnSiguiente2);
@@ -174,7 +181,6 @@ namespace Sueldos_3formularios_
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtSalario;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPremio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtSueldo;
         private System.Windows.Forms.Label label4;
@@ -182,6 +188,7 @@ namespace Sueldos_3formularios_
         private System.Windows.Forms.Button btnSiguiente2;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtPremio;
     }
 }
 
