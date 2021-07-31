@@ -26,10 +26,13 @@ namespace Sueldos_3formularios_
             lblTotal.Text = Form2.Total;
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
+        public void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Close();
             
+            Form1 formulario1 = new Form1();
+            var limpiar = new Utiles();
+            limpiar.LimpiarFormulario(formulario1);
+            Close();
         }
     }
 }

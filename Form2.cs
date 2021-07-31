@@ -42,6 +42,7 @@ namespace Sueldos_3formularios_
             Total = lblTotal.Text;
             Form3 formulario3 = new Form3();
             formulario3.Show();
+            Close();
         }
     }
 }

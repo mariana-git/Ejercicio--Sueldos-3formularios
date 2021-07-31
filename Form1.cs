@@ -30,42 +30,38 @@ namespace Sueldos_3formularios_
 
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-        //cierro el formulario
-            this.Close();
-        }
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e) => Close();
+        public void btnLimpiar_Click(object sender, EventArgs e)
         {
         // Limpio el formulario con el metodo de la clase UTILES:
             var Util = new Utiles();
             Util.LimpiarFormulario(this);
         }
         // Hago que los txtbox admitan solo letras o numeros con los metodos de la clase UTILES:
-        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             var letras = new Utiles();
             letras.SoloLetras(e);
         }
-        private void txtSueldo_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtSueldo_KeyPress(object sender, KeyPressEventArgs e)
         {
             var numeros = new Utiles();
             numeros.SoloNumeros(e);
         }
 
-        private void txtPremio_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtPremio_KeyPress(object sender, KeyPressEventArgs e)
         {
             var numeros = new Utiles();
             numeros.SoloNumeros(e);
         }
 
-        private void txtSalario_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtSalario_KeyPress(object sender, KeyPressEventArgs e)
         {
             var numeros = new Utiles();
             numeros.SoloNumeros(e);
         }
 
-        public void btnSiguiente2_Click(object sender, EventArgs e)
+        public void BtnSiguiente2_Click(object sender, EventArgs e)
         {
             //Este botón redirige al formulario 2 y pasa los datos cargados
             double sueldo = Convert.ToDouble(txtSueldo.Text);

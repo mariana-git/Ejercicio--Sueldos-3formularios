@@ -58,7 +58,7 @@ namespace Sueldos_3formularios_
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(149, 23);
             this.txtNombre.TabIndex = 1;
-            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_KeyPress);
             // 
             // txtSalario
             // 
@@ -66,7 +66,7 @@ namespace Sueldos_3formularios_
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(149, 23);
             this.txtSalario.TabIndex = 4;
-            this.txtSalario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalario_KeyPress);
+            this.txtSalario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSalario_KeyPress);
             // 
             // label2
             // 
@@ -92,7 +92,7 @@ namespace Sueldos_3formularios_
             this.txtSueldo.Name = "txtSueldo";
             this.txtSueldo.Size = new System.Drawing.Size(149, 23);
             this.txtSueldo.TabIndex = 2;
-            this.txtSueldo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldo_KeyPress);
+            this.txtSueldo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSueldo_KeyPress);
             // 
             // label4
             // 
@@ -121,7 +121,7 @@ namespace Sueldos_3formularios_
             this.btnSiguiente2.TabIndex = 7;
             this.btnSiguiente2.Text = "Siguiente";
             this.btnSiguiente2.UseVisualStyleBackColor = true;
-            this.btnSiguiente2.Click += new System.EventHandler(this.btnSiguiente2_Click);
+            this.btnSiguiente2.Click += new System.EventHandler(this.BtnSiguiente2_Click);
             // 
             // btnLimpiar
             // 
@@ -149,7 +149,7 @@ namespace Sueldos_3formularios_
             this.txtPremio.Name = "txtPremio";
             this.txtPremio.Size = new System.Drawing.Size(149, 23);
             this.txtPremio.TabIndex = 3;
-            this.txtPremio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPremio_KeyPress);
+            this.txtPremio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPremio_KeyPress);
             // 
             // Form1
             // 
