@@ -28,11 +28,11 @@ namespace Sueldos_3formularios_
 
         public void btnVolver_Click(object sender, EventArgs e)
         {
+            Dispose();
             
-            Form1 formulario1 = new Form1();
+            //limpio los controles del formulario1
             var limpiar = new Utiles();
-            limpiar.LimpiarFormulario(formulario1);
-            Close();
+            limpiar.LimpiarFormulario(ActiveForm);
         }
     }
 }

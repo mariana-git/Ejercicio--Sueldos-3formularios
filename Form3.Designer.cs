@@ -57,7 +57,7 @@ namespace Sueldos_3formularios_
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(109, 381);
+            this.btnVolver.Location = new System.Drawing.Point(130, 380);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 23);
             this.btnVolver.TabIndex = 21;
@@ -194,7 +194,7 @@ namespace Sueldos_3formularios_
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Recibo de Sueldo";
             this.ResumeLayout(false);
             this.PerformLayout();
 

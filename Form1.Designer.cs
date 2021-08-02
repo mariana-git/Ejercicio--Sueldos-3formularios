@@ -29,6 +29,7 @@ namespace Sueldos_3formularios_
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtSalario = new System.Windows.Forms.TextBox();
@@ -41,6 +42,8 @@ namespace Sueldos_3formularios_
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPremio = new System.Windows.Forms.TextBox();
+            this.ErrPrvNombre = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ErrPrvNombre)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -151,6 +154,10 @@ namespace Sueldos_3formularios_
             this.txtPremio.TabIndex = 3;
             this.txtPremio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPremio_KeyPress);
             // 
+            // ErrPrvNombre
+            // 
+            this.ErrPrvNombre.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -170,6 +177,7 @@ namespace Sueldos_3formularios_
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Sueldos";
+            ((System.ComponentModel.ISupportInitialize)(this.ErrPrvNombre)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,6 +197,7 @@ namespace Sueldos_3formularios_
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPremio;
+        private System.Windows.Forms.ErrorProvider ErrPrvNombre;
     }
 }
 

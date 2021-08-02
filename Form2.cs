@@ -17,13 +17,14 @@ namespace Sueldos_3formularios_
         //En dicho formulario se deberá colocar dos botones: uno de cancelar, que enviara al usuario al primer formulario y contendrá
         //los datos que ingreso anteriormente y uno de siguiente que lo llevara al tercer formulario
 
-        public static string Descuento { get; protected set; }
-        public static string Total { get; protected set; }
+        //declaro dos variables globales más para usar en el form3
+        public static string Descuento;
+        public static string Total;
         public Form2(double sueldo, double premio, double salario)
         {
             InitializeComponent();
            
-            double descuento = (sueldo + premio) / 5;
+            double descuento = (sueldo + premio) * 0.2;
             double total = sueldo + premio + salario - descuento;
             
 
@@ -33,15 +34,18 @@ namespace Sueldos_3formularios_
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
 
         public void btnSiguiente3_Click(object sender, EventArgs e)
         {
+            //asigno a las variables globales los valores obtenidos
             Descuento = lblDescuento.Text;
             Total = lblTotal.Text;
+
             Form3 formulario3 = new Form3();
             formulario3.Show();
+
             Close();
         }
     }

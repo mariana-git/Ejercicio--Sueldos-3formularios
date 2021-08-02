@@ -18,10 +18,10 @@ namespace Sueldos_3formularios_
         //este formulario tendrá 3 botones: uno de salida, otro de limpiar y otro que indique ir al segundo formulario.
     {
         //Declaro públlicas las variables para utilizarlas en en el tercer formulario
-        public static string Nombre { get; protected set; }
-        public static string Sueldo { get; protected set; }
-        public static string Premio { get; protected set; }
-        public static string Salario { get; protected set; }
+        public static string Nombre;
+        public static string Sueldo;
+        public static string Premio;
+        public static string Salario;
 
         public Form1()
         {
@@ -30,7 +30,11 @@ namespace Sueldos_3formularios_
 
         }
 
-        private void btnSalir_Click(object sender, EventArgs e) => Close();
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
         public void btnLimpiar_Click(object sender, EventArgs e)
         {
         // Limpio el formulario con el metodo de la clase UTILES:
@@ -63,17 +67,40 @@ namespace Sueldos_3formularios_
 
         public void BtnSiguiente2_Click(object sender, EventArgs e)
         {
-            //Este botón redirige al formulario 2 y pasa los datos cargados
-            double sueldo = Convert.ToDouble(txtSueldo.Text);
-            double premio = (sueldo*(Convert.ToDouble(txtPremio.Text)/100));
-            double salario = Convert.ToDouble(txtSalario.Text);
-            Nombre = txtNombre.Text;
-            Sueldo = txtSueldo.Text;
-            Premio = $"{premio}";
-            Salario = txtSalario.Text;
+            //realizo un control de que se complete el nombre del empleado
+            if (txtNombre.Text == string.Empty) ErrPrvNombre.SetError(txtNombre, "Indique Nombre");
+            else
+            {
+                //si el campo de nombre de empleado ya esta completo, ejecuto el resto del código
+
             
-            Form2 formulario2 = new Form2(sueldo,premio,salario);
-            formulario2.Show();
+                //recorro los controles colocando 0 en los textbox que estén vacíos
+                foreach (Control c in this.Controls)
+                {
+                    if (c is TextBox)
+                    {
+                        if (c.Text == string.Empty)
+                        {
+                            c.Text = "0";
+                        }
+                    }
+                }            
+                //Este botón redirige al formulario 2 y pasa los datos cargados
+                double sueldo = Convert.ToDouble(txtSueldo.Text);
+                double premio = (sueldo*(Convert.ToDouble(txtPremio.Text)/100));
+                double salario = Convert.ToDouble(txtSalario.Text);
+
+                //cargo las variables globales con los valores de los txtbox para usarlos en el form3
+                Nombre = txtNombre.Text;
+                Sueldo = txtSueldo.Text;
+                Premio = $"{premio}";
+                Salario = txtSalario.Text;
+
+                Form2 formulario2 = new Form2(sueldo,premio,salario);
+                formulario2.Show();
+                //limpio el error provider
+                ErrPrvNombre.Clear();
+            }
         }
     }
 }
